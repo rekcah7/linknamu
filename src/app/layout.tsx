@@ -17,7 +17,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
-      <body className="min-h-dvh bg-gradient-to-b from-emerald-50 to-emerald-100 text-gray-900 antialiased">
+      <head>
+        {/* Pretendard: 한글을 포함한 둥근 산세리프 (필요한 글자만 내려받는 dynamic subset) */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
+      <body className="min-h-dvh font-sans text-stone-800 antialiased">
         {children}
       </body>
     </html>

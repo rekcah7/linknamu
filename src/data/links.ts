@@ -14,13 +14,13 @@ export type LinkItem = {
 };
 
 export const profile: Profile = {
-  name: "김클로",
-  bio: "세계 최강 바이브코더",
-  image: "/profile-placeholder.svg",
+  name: "김개발",
+  bio: "풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요",
+  image: "/profile.jpg",
 };
 
 export const links: LinkItem[] = [
-  { id: "github", title: "GitHub", url: "https://github.com" },
-  { id: "linkedin", title: "LinkedIn", url: "https://www.linkedin.com" },
-  { id: "blog", title: "Blog", url: "https://example.com/blog" },
+  { id: "github", title: "💻 GitHub", url: "https://github.com" },
+  { id: "blog", title: "📝 Blog", url: "https://example.com/blog" },
+  { id: "email", title: "📧 Email", url: "mailto:hello@example.com" },
 ];

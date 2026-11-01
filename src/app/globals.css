@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    sans-serif;
+}
+
+@layer base {
+  body {
+    /* 크림색 → 연한 살구색의 따뜻한 그라데이션 */
+    background:
+      radial-gradient(
+        120% 60% at 50% 0%,
+        rgb(255 252 245) 0%,
+        transparent 70%
+      ),
+      linear-gradient(180deg, #fdf6ec 0%, #fbe8da 55%, #f8d9c4 100%);
+    background-attachment: fixed;
+    word-break: keep-all;
+  }
+
+  ::selection {
+    background: rgb(251 191 160 / 0.6);
+  }
+}
