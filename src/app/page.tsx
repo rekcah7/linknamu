@@ -1,5 +1,5 @@
 import Profile from "@/components/Profile";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import { links, profile } from "@/data/links";
 
 // 와이어프레임(wireframe.png) 구성:
@@ -10,13 +10,7 @@ export default function Home() {
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col items-center px-6 pt-20 pb-16 sm:pt-28">
       <Profile {...profile} />
 
-      <ul className="mt-12 flex w-full flex-col gap-4 sm:gap-5">
-        {links.map((link) => (
-          <li key={link.id}>
-            <LinkCard {...link} />
-          </li>
-        ))}
-      </ul>
+      <LinkList links={links} />
     </main>
   );
 }
